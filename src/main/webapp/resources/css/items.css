@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #E2DED5; /* 베이지색 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    width: calc(25% - 20px);
+    margin: 1%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #febd1a; /* 개나리색 */
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.page-link {
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: #333;
+    margin: 0 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+/**********************************/
+
+h2 {
+    color: #0066cc;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

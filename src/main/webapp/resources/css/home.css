@@ -1,0 +1,517 @@
+@charset "UTF-8";
+@import
+	url('http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 전체페이지 */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+.test{
+	height:100%;
+}
+.test h1{
+	font-size:300px;
+}
+#video_area {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  border-bottom-left-radius:25%;
+}
+#background_video {
+    z-index: -1;
+    width: 100vw;
+    position: absolute;
+}
+
+@media screen and (max-aspect-ratio: 1280/720) {
+   #background_video {
+       width: auto;
+       height: 100vh;
+    }
+}
+.wrap{
+   width :100%;
+   height:100%;
+   background:linear-gradient(to left, rgb(0,0,0), rgb(255,255,255));
+   mix-blend-mode:overlay; 
+   border-bottom-left-radius:25%;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	background-size:100%;
+	z-index:-10;
+	background:url()fixed;
+}
+
+.content1 {
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	font-size: 0;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	/*  align-items: center; */
+	/*  justify-content: center; */
+}
+
+.woosulcho {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 100px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+
+.swiper-container {
+	top: 0;
+	position: relative;
+	width: 100%;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-wrapper {
+	height: 100%;
+}
+
+.swiper-slide {
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	position: relative;
+}
+
+.swiper-slide img {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*소개*/
+.wsch-intro{
+	width:80%;
+	height:600px;
+	position:relative;
+	margin:0 auto;
+}
+.wsch-introduce{
+	position:absolute;
+	height:500px;
+	width:60%;
+	left:0;
+	align-items: center;
+	justify-content: center;
+}
+
+/*추천*/
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.recomend-text1 {
+	position: absolute;
+	top: 18%;
+	right: 5%;
+	font-weight: bold;
+	font-size: 70px;
+	animation: ease-out;
+/* 	font-family: 'NPSfontBold'; */
+	font-family: 'MYYeongnamnu';
+}
+
+.recomend-text2 {
+	position: absolute;
+	top:31%;
+	right:5%;
+	font-weight: bold;
+	font-size: 70px;
+	color:#776B5D;
+/* 	font-family:'NPSfontBold'; */
+		font-family: 'MYYeongnamnu';
+}
+
+.testbtn {
+	height: 60px;
+	weight: auto;
+	position: absolute;
+	top: 66%;
+	right: 4%;
+	border: none;
+	font-size: 30px;
+	color: #fff;
+	padding: 10px 30px;
+	background-color: #776B5D;
+	border-radius: 30px;
+	margin: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+/* 	font-family: 'NPSfontBold'; */
+		font-family: 'MYYeongnamnu';
+}
+
+.testimg {
+	position: absolute;
+	top:18%;
+	left:5%;
+	height:388px;
+	width: 600px;
+	border-radius: 80px;
+}
+
+/* 3번화면 */
+ .best-item {
+	height:90vh;
+	width:100%;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	background-color:#B0A695;
+	margin:0 auto;
+	  border-top-right-radius:25%;
+	   border-bottom-left-radius:25%;
+}
+.best{
+ font-family: 'iceJaram-Rg';
+	color:white;
+	font-size:55px;
+	position:absolute;
+	top:10%;
+	left:48%;
+	right:50%;
+	transform: translate(-50%, -50%);
+} 
+@keyframes slide {
+from { 
+	left:-250px;
+	opacity: 0;
+}
+
+to {
+	left: 250px;
+	opacity: 1;
+}
+
+}
+@keyframes disappear {
+from { 
+	left:250px;
+	opacity: 1;
+}
+
+to {
+	left: -250px;
+	opacity: 0;
+}
+
+}
+
+.slide-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1120px;
+    width: 100%;
+    max-height: 600px;
+    padding: 40px 0;
+}
+
+.slide-content {
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.card {
+	width: 320px;
+	border-radius: 25px;
+	background-color: #fff;
+}
+
+.image-content, .card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 14px;
+}
+
+.image-content {
+	position: relative;
+	row-gap: 5px;
+	padding: 25px 0;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #E2DED5;
+	border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before, .overlay::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+	height: 40px;
+	width: 40px;
+	background-color: #E2DED5;
+}
+
+.overlay::after {
+	border-radius: 0 25px 0 0;
+	background-color: #fff;
+}
+
+.card-image {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background: #fff;
+	padding: 3px;
+}
+
+.card-image .card-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid #E2DED5;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 500;
+	color: #333;
+}
+
+.description {
+	height: 150px;
+	font-size: 14px;
+	color: #707070;
+	text-align: center;
+}
+
+.button {
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	padding: 8px 16px;
+	background-color:   #E2DED5;
+	border-radius: 6px;
+	margin: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.button:hover {
+	background: red;
+}
+
+.swiper-navBtn {
+	color:   #E2DED5;
+	transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+	color: red;
+}
+
+.swiper-navBtn::before, .swiper-navBtn::after {
+	font-size: 40px;
+}
+
+.swiper-button-next {
+	right: 0;
+}
+
+.swiper-button-prev {
+	left: 0;
+}
+
+/*.swiper-pagination-bullet {
+	background-color: #E2DED5;
+	color:#E2DED5;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	background: #E2DED5;
+}
+
+*/
+.swiper-pagination-bullet {
+	
+	background: transparent;
+	border: 1px solid  #E2DED5;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+
+	transition: width .5s;
+	border-radius: 5px;
+	background: #E2DED5;
+	border: 1px solid transparent;
+}
+
+/*4번페이지*/
+.height{
+	height:100px;
+}
+.event-list {
+	height: 800px;
+	width:90%;
+	background-color:#E2DED5;
+	margin:0 auto;
+	padding-top:100px;
+	display: flex;
+	overflow: hidden;
+	font-family: 'NPSfontBold';
+	position: relative;
+}
+.event{
+	font-size:38px;
+	position:absolute;
+	left:45%;
+	 font-family: 'iceJaram-Rg';
+}
+.event-news1{
+	dispaly:flex;
+	position:absolute;
+	left:5%;
+	top:30%;
+	width:40%;
+	height:500px;
+	padding:100px;
+	z-index:5;
+	margin:0 auto;
+	background-color:white;
+}
+.event-news2{
+	dispaly:flex;
+	position:absolute;
+	right:5%;
+	top:30%;
+	width:40%;
+	height:500px;
+	padding:100px;
+	z-index:5;
+	margin:0 auto;
+	background-color:white;
+}
+/*5번페이지*/
+@font-face {
+    font-family: 'iceJaram-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.map {
+	position:relative;
+    height: 500px; 
+    display: flex;
+    flex-direction: column;
+    padding:25px 10% 25px 25px;
+}
+
+.map-button1{
+	position:absolute;
+	top:10%;
+	right:5%;
+    height: 60px;
+    width: 200px;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 30px;
+   background-color: #776B5D;
+    border-radius: 30px;
+    margin: 50px 0 10px 0; 
+    cursor: pointer;
+    font-family: 'iceJaram-Rg';
+}.map-button2{
+	position:absolute;
+	top:30%;
+	right:5%;
+    height: 60px;
+    width: 200px;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 30px;
+   background-color: #776B5D;
+    border-radius: 30px;
+    margin: 50px 0 10px 0; 
+    cursor: pointer;
+    font-family: 'iceJaram-Rg';
+}.map-button3{
+	position:absolute;
+	top:50%;
+	right:5%;
+    height: 60px;
+    width: 200px;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 30px;
+    background-color: #776B5D;
+    border-radius: 30px;
+    margin: 50px 0 10px 0; 
+    cursor: pointer;
+   font-family: 'iceJaram-Rg';
+}
+.map-text1{
+	position: absolute;
+	top: 28%;
+	left: 17%;
+	font-weight: bold;
+	font-size: 70px;
+	animation: ease-out;
+	 font-family: 'iceJaram-Rg';
+}
+.map-text2{
+	position: absolute;
+	top: 48%;
+	left: 31%;
+	font-weight: bold;
+	font-size: 70px;
+	animation: ease-out;
+ font-family: 'iceJaram-Rg';
+}

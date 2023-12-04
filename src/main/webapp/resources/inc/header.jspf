@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우슬초</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/wsch/resources/css/including.css"/>
+<body>
+<!--  페이지 상단 -->
+<header>
+    <div class="inner">
+	<h1><a href="/wsch"><img src="${contextPath}/resources/img/logo-white.png" class="logo"/></a></h1>
+    <a href="/wsch/login"><img src="${contextPath}/resources/img/login.png" class="login"/></a>
+	    <h2 class="blind">주메뉴</h2>
+		    <nav class="nav">
+		        <ul class="gnb clear">
+		        	<li><a onclick="goToScroll('section1')"><span class="Introduce">우슬초 소개</span></a>
+		            </li>
+		            <li><a onclick="goToScroll('section2')"><span class="Introduce"><span>전통주 찾기</span></a>
+		                <ul>
+		                    <li><a href="/wsch/recmnd">나만의 전통주</a></li>
+		                    <li><a href="/wsch/items/list">전통주 리스트</a></li>
+		                </ul>
+		            </li>
+		            <li>
+		                <a onclick="goToScroll('section3')"><span>전통주 사업장</span></a>
+		                <ul class="dep2">
+		                    <li><a href="https://naver.me/GqNeD5gT">전통주점</a></li>
+		                    <li><a href="https://naver.me/GNvO9sBU">판매장</a></li>
+		                    <li><a href="https://naver.me/GVNDfDPg">양조장</a></li>
+		                </ul>
+		            </li>
+				       <li>
+		                   <a href=""><span>전통주 행사</span></a>
+		                   <ul class="dep2">
+		                       <li><a href="/wsch/board/board_list">행사 살펴보기</a></li>
+		                       <li><a href="/wsch/board/board_view">행사 살펴보기2</a></li>
+		                   </ul>
+		               </li>
+		        </ul>	            	
+	        </nav>
+	        <button class="more-btn">
+	        	<i class="icon" ></i>
+			</button>
+	</div>
+</header>
+<script>
+$(function(){
+	var depth1 = $(".gnb > li"),
+		header = $("header");
+	
+	depth1.mouseenter(function(){
+		header.stop().animate({height:"30vh"});
+	}).mouseleave(function(){
+		header.stop().animate({height:"72px"});
+	})
+});
+</script>
+<script>
+$(document).ready(function(){
+	$('.more-btn').click(function(){
+		$(this).toggleClass('active');
+		$('.nav').toggleClass('active');
+	});
+	$('.more-btn').click(function(){
+		$(this).toggleClass('activo');
+		$('header').toggleClass('activo');
+	});
+});
+
+</script>
+<script>
+function goToScroll(name) {
+    var location = document.querySelector("#" + name).offsetTop;
+    window.scrollTo({top: location, behavior: 'smooth'});
+    }
+</script>
+<script>
+$(document).ready(function () {
+    var header = $("header");
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 110) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    });
+});
+</script>
